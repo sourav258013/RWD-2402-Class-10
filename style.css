@@ -1,0 +1,418 @@
+/* common css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family:"Open Sans";
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+.container{
+   width: 1170px;
+   margin: auto;
+}
+.row{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+/* common css end*/
+
+
+/* =====Nav start===== */
+nav{
+   background-color: #02918c;
+   height: 61px;
+}
+nav .container{
+   /* width: 1170px; */
+   margin: auto;
+}
+nav .container .row{
+   display: flex;
+   align-items: center;
+   height: 61px;
+   justify-content: space-between;
+}
+nav ul li{
+   display: inline-block;
+}
+nav ul li a{
+   text-transform: uppercase;
+   color: #ffffff;
+   font-weight: 800;
+   padding: 20px 25px;
+}
+nav ul li a:hover{
+   color: #cfc91d;
+   transition: 0.3s;
+}
+/* ===== dropdawn menu start===== */
+nav .parent{
+   position: relative;
+ 
+}
+nav .child{
+   position: absolute;
+   width: 250px;
+   background-color: #02918c;
+   margin-top: 20px;
+   visibility: hidden;
+   opacity: 0;
+}
+nav .parent:hover .child{
+   visibility: visible;
+   opacity: 1;
+   transition: 0.4s;
+}
+nav .child li{
+   width: 100%;
+}
+nav .child li a{
+   display: inline-block;
+   width: 100%;
+   padding: 15px;
+}
+/* ===== dropdawn menu end===== */
+
+/* ===== sub dropdawn menu start===== */
+nav .sub-parent{
+position: relative;
+}
+nav .sub-child{
+position: absolute;
+width: 250px;
+background-color: #02918c;
+margin-left: 250px;
+top: 0;
+visibility: hidden;
+opacity: 0;
+}
+nav .sub-parent:hover .sub-child{
+   visibility: visible;
+   opacity: 1;
+   transition: 0.4s;
+}
+nav .sub-child li{
+   width: 100%;
+}
+nav .sub-child a{
+   width: 100%;
+   padding: 15px;
+}
+/* ===== sub dropdawn menu end===== */
+
+/* =====shudo element ::before start===== */
+nav ul li a{
+   position: relative;
+}
+nav ul li a::before{
+   position: absolute;
+   content: "";
+   width: 0;
+   height: 4px;
+   background-color: #ffffff;
+   left: 0;
+   bottom: 0;
+   transition: 0.3s;
+}
+nav ul li a:hover::before{
+   width: 100%;
+   background-color: #cfc91d;
+}
+/* =====shudo element ::before end===== */
+/* =====Nav end===== */
+
+/* =====Banner start===== */
+ #banner{
+   background-image: url('./images/banner.png');
+   height: 720px;
+   background-repeat: no-repeat;
+   background-size:cover;
+ }
+ #banner .container .contains{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 720px;
+   color: #ffffff;
+ }
+ #banner .container .contains h4{
+   font-size: 30px;
+ }
+ #banner .container .contains h1{
+   text-transform: uppercase;
+   font-weight: 800;
+   font-size: 68px;
+   letter-spacing: 30px;
+ }
+ #banner .container .contains p{
+   font-size: 18px;
+ }
+ #banner .container .contains img{
+   margin-top: 53px;
+   margin-bottom: 42px;
+ }
+ #banner .container .contains button{
+   font-size: 14px;
+   font-weight: 800;
+   padding: 19px 42px;
+   letter-spacing: 1.5px;
+   background-color: #cfc91d;
+ }
+
+ #banner .container .contains button a{
+   display: inline-block;
+   position: relative;
+   color: #000;
+   
+ }
+ #banner .container .contains button a:hover{
+   color: #ffffff;
+ 
+ }
+ #banner .container .contains button:hover{
+   background-color: #2980b9;
+ }
+ #banner .container .contains button span{
+   display: block;
+ }
+#banner .container .contains button a::before, #banner .container .contains button a::after{
+   position: absolute;
+   display: block;
+   content: "";
+   background-color: #cfc91d;
+   transition: 0.3s;
+}
+#banner .container .contains button a::before{
+   top: -23px;
+   right: -42px;
+   width: 0;
+   height: 4px;
+   background-color:#cfc91d;
+}
+#banner .container .contains button a:hover::before{
+   width: 187%;
+}
+#banner .container .contains button a::after{
+   bottom: -20px;
+   left: -42px;
+   width: 0;
+   height: 4px;
+}
+#banner .container .contains button a:hover::after{
+   width: 189%;
+}
+
+#banner .container .contains button span::before, #banner .container .contains button span::after{
+   position: absolute;
+   display: block;
+   content: "";
+   background-color:#cfc91d;
+   transition: 0.3s;
+}
+#banner .container .contains button span::before{
+   top: -23px;
+   left: -46px;
+   width: 4px;
+   height: 0;
+}
+#banner .container .contains button span:hover::before{
+   height: 318%;
+}
+#banner .container .contains button span::after{
+   bottom: -19px;
+   right: -46px;
+   width: 4px;
+   height: 0;
+}
+#banner .container .contains button span:hover::after{
+   height: 316%;
+}
+/* =====Banner end===== */
+
+
+
+/* =====Aboute start===== */
+#about{
+   padding: 100px 0;
+}
+.header{
+   width: 880px;
+   margin: auto;
+}
+#about .container .header{
+   text-align: center;
+}
+#about .container .header h1{
+   color: #02918c;
+   font-size: 46px;
+   font-weight: 800;
+}
+#about .container .header span{
+   padding: 32px 0;
+   display: inline-block;
+}
+#about .container .header p{
+   font-size: 16px;
+   color: #7e8287;
+   line-height: 41px;
+   margin-bottom: 81px;
+}
+#about .container .header b{
+   font-size: 23px;
+   color: #a8abae;
+}
+#about .container .card{
+   width: 25%;
+   text-align: center;
+   border-right: 1px solid #d9dbdb;
+}
+#about .container .card:last-child{
+   border: none;
+}
+#about .container .card h3{
+   padding: 33px 0;
+   font-size: 16px;
+   color: #7e8287;
+}
+#about .container .card p{
+   color: #7e8287;
+   padding: 0 50px;
+   font-size: 11px;
+   line-height: 21px;
+}
+/* =====Aboute end===== */
+
+/* =====Service part start===== */
+#service{
+   background-image: url("images/photo-service.png");
+   height: 725px;
+   /* background-position: right; */
+   background-position-x: right;
+   background-position-y:center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+#service .container{
+   padding-top: 73px;
+   margin: 0px 83px;
+}
+#service .container .subcontains-one{
+   width: 470px;
+}
+#service .container .subcontains-one h1{
+   font-size: 43px;
+  font-weight: 800;
+  color: #02918c;
+}
+#service .container .subcontains-one span{
+   padding-top: 43px;
+   display: flex;
+   color: #7e8287;
+
+}
+#service .container .subcontains-one p{
+   padding-top: 27px;
+   color: #7e8287;
+}
+
+#service .subcontainer-two {
+width: 470px;
+}
+#service .subcontainer-two .row-one{
+   display: flex;
+}
+
+/* =====card-one start===== */
+#service .subcontainer-two .row-one .card-one{
+   width: 163px; 
+   }
+   #service .subcontainer-two .row-one .card-one img{
+   margin-top: 61px;
+   }
+   #service .subcontainer-two .row-one .card-one h3{
+   color: #909396;
+   padding-top: 17px;
+   }
+   #service .subcontainer-two .row-one .card-one p{
+   padding-top: 23px;
+   font-size: 11px;
+   color: #7e8287;
+   }
+/* =====card-one end===== */
+
+
+/* =====card-two start===== */
+#service .subcontainer-two .row-one .card-two{
+   width: 163px;
+   margin-left: 128px; 
+   }
+   #service .subcontainer-two .row-one .card-two img{
+   margin-top: 61px;
+   }
+   #service .subcontainer-two .row-one .card-two h3{
+   color: #909396;
+   padding-top: 17px;
+   }
+   #service .subcontainer-two .row-one .card-two p{
+   padding-top: 23px;
+   font-size: 11px;
+   color: #7e8287;
+   }
+/* =====card-two end===== */
+
+#service .subcontainer-two .row-two{
+   display: flex;
+}
+
+/* =====card-three start===== */
+#service .subcontainer-two .row-two .card-three{
+   width: 163px;
+   /* margin-right: 128px; */
+   }
+   #service .subcontainer-two .row-two .card-three img{
+      margin-top: 55px;
+   }
+   #service .subcontainer-two .row-two .card-three h3{
+      /* font-size: 16px; */
+      color: #909396;
+      padding-top: 21px;
+   }
+   #service .subcontainer-two .row-two .card-three p{
+      font-size: 11px;
+      color: #7e8287;
+      padding-top: 23px;
+   }
+/* =====card-three end===== */
+
+/* =====card-four start===== */
+#service .subcontainer-two .row-two .card-four{
+   width: 163px;
+   margin-left: 128px;
+   }
+   #service .subcontainer-two .row-two .card-four img{
+      margin-top: 55px;
+   }
+   #service .subcontainer-two .row-two .card-four h3{
+      /* font-size: 16px; */
+      color: #909396;
+      padding-top: 21px;
+   }
+   #service .subcontainer-two .row-two .card-four p{
+      font-size: 11px;
+      color: #7e8287;
+      padding-top: 23px;
+   }
+/* =====card-four end===== */
+
+/* =====Service part end===== */
